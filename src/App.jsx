@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import "./App.css";
 
 function App() {
-
   return (
-    <>
-    <h1>Hello react</h1>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
