@@ -1,12 +1,24 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
 import "./App.css";
+
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import ErrorBoundary from "./components/ErrorBoundry";
+import Loader from "./components/Loader/Loader";
+import { ROUTES } from "./constants/routes";
+const HomePage = lazy(() => import("./pages/HomePage"));
+const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-    </Routes>
+    <ErrorBoundary>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
