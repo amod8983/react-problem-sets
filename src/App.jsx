@@ -3,11 +3,11 @@ import "./App.css";
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import ErrorBoundary from "./components/ErrorBoundry";
-import Loader from "./components/Loader/Loader";
+import ErrorBoundary from "./components/Common/ErrorBoundry";
+import Loader from "./components/Common/Loader/Loader";
 import { ROUTES } from "./constants/routes";
 const HomePage = lazy(() => import("./pages/HomePage"));
-const NotFound = lazy(() => import("./components/NotFound/NotFound"));
+const NotFound = lazy(() => import("./components/Common/NotFound/NotFound"));
 
 function App() {
   return (
