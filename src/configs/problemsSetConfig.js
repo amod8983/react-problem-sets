@@ -17,14 +17,11 @@ export const DIFFICULTY_STYLES = {
 
 export const problemsSetConfig = [
   {
-    title: "Lorem ipsum",
-    subtitile:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do" +
-      "eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut" +
-      "enim ad minim veniam, quis nostrud exercitation.",
+    title: "Stopwatch",
+    subtitile:'Build a stop watch in react with start, pause, resume, reset functionality',
     background: DIFFICULTY_STYLES.easy.background,
     color: DIFFICULTY_STYLES.easy.color,
-    url: ROUTES.HOME,
+    url: ROUTES.STOPWATCH,
   },
   {
     title: "Lorem ipsum",

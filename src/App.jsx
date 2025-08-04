@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import ErrorBoundary from "./components/Common/ErrorBoundry";
 import Loader from "./components/Common/Loader/Loader";
 import { ROUTES } from "./constants/routes";
+import Stopwatch from "./problems/Stopwatch/Stopwatch";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const NotFound = lazy(() => import("./components/Common/NotFound/NotFound"));
 
@@ -15,6 +16,7 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.STOPWATCH} element={<Stopwatch />} />
           <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
         </Routes>
       </Suspense>
